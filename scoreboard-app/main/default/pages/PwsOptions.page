@@ -1,0 +1,12 @@
+<!--
+ - Created by brett on 6/11/18.
+ -->
+
+<apex:page id="PwsOptions"
+        contentType="application/javascript">
+    let options = {
+    resourceRoot: '{!URLFOR($Resource.pwa)}',
+    instanceUrl: '{! $Site.BaseRequestUrl }',
+    accessToken: '{! $API.Session_Id }'
+    }
+</apex:page>

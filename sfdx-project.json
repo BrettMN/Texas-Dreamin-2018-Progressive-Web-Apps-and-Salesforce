@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    {
+      "path": "scoreboard-app",
+      "default": true
+    }
+  ],
+  "namespace": "scoreboard",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "43.0"
+}

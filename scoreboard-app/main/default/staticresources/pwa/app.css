@@ -1,0 +1,337 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Arial', 'Open Sans', 'sans-serif';
+
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: .5em;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: .5em;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+/* APP */
+
+.App {
+    margin: 2em;
+}
+
+.show-menu-button {
+    right: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-size: 1.75em;
+    background: 0;
+}
+
+.nav {
+    background: lightblue;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    text-align: center;
+    position: fixed;
+    width: 90%;
+    right: 0;
+    margin-right: 5%;
+    z-index: 1;
+}
+
+.nav > li > a {
+    display: block;
+    font-size: 1.5em;
+    margin: .5em;
+    text-decoration: none;
+    font-family: Arial, "Open Sans", sans-serif;
+    background-color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.menu-enter-active, .menu-leave-active {
+    transition: opacity .5s;
+}
+
+.menu-enter, .menu-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+    opacity: 0;
+}
+
+button.scoreboard {
+    font-size: 1.75em;
+    background: 0;
+    margin: 1em 0;
+    background: lightblue;
+    float: right;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Games */
+
+.Games > ul > li {
+    padding: .75em;
+    font-size: 1.25em;
+}
+
+.Games > ul > li > a {
+
+    text-decoration: none;
+    float: right;
+}
+
+.Games > ul > li > a:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Game table {
+    width: 100%;
+}
+
+.Game th {
+    font-weight: bold;
+}
+
+.Game td {
+    /* Behave  like a "row" */
+    /*border: none;*/
+    /*border-bottom: 1px solid #eee;*/
+    /*position: relative;*/
+    /*padding-left: 50%;*/
+    /*white-space: normal;*/
+    text-align: center;
+    height: 2em;
+}
+
+.Game [data-title="Team"] {
+    font-weight: bold;
+}
+
+.Game td > input {
+    margin-left: 4%;
+    width: 90%;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+/*.Game td:before {*/
+/*!* Now like a table header *!*/
+/*position: absolute;*/
+/*!* Top/left values mimic padding *!*/
+/*top: 6px;*/
+/*left: 6px;*/
+/*width: 45%;*/
+/*padding-right: 10px;*/
+/*white-space: nowrap;*/
+/*text-align: center;*/
+/*font-weight: bold;*/
+/*}*/
+
+/*!* Extra small devices (phones, 600px and down) *!*/
+/*@media only screen and (max-width: 600px) {*/
+/*}*/
+
+/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
+/*@media only screen and (min-width: 600px) {*/
+/*}*/
+
+/*!* Medium devices (landscape tablets, 768px and up) *!*/
+/*@media only screen and (min-width: 768px) {*/
+/*}*/
+
+/*!* Large devices (laptops/desktops, 992px and up) *!*/
+/*@media only screen and (min-width: 992px) {*/
+/*}*/
+
+@media only screen and (max-width: 800px) {
+
+    /* Force table to not be like tables anymore */
+    .Game table,
+    .Game thead,
+    .Game tbody,
+    .Game th,
+    .Game td,
+    .Game tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .Game thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .Game tr {
+        border: 1px solid #ccc;
+        padding: .5em;
+    }
+
+    .Game td {
+        /* Behave  like a "row" */
+        border: none;
+        /*border-bottom: 1px solid #eee;*/
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: center;
+        height: 2em;
+    }
+
+    .Game td > input {
+        margin-left: 4%;
+        width: 90%;
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .Game td.total {
+        padding-top: 0.5em;
+        margin-top: .5em;
+        font-weight: bold;
+    }
+
+    .Game td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /*
+    Label the data
+    */
+    .Game td:before {
+        content: attr(data-title);
+    }
+
+    .Game button {
+        width: 100%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .show-menu-button {
+        display: none;
+    }
+
+    .nav {
+
+        text-align: center;
+        position: inherit;
+        width: 100%;
+        display: block !important;
+        margin-bottom: .75em;
+    }
+
+    .nav > li {
+        width: 24%;
+        display: inline-block;
+    }
+}
+
+
+@media all and (display-mode: standalone) {
+    body {
+        background-color: deepskyblue;
+    }
+}
+
