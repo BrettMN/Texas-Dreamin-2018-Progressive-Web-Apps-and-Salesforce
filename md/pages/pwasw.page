@@ -1,0 +1,36 @@
+<apex:page contentType="application/javascript"
+        controller="PwaController">
+
+    let localForageUrl = '{! URLFOR($Resource.pwa, "libs/localforage.js") }';
+
+
+    let filesFromPwaStaticResource = [
+    '{!URLFOR($Resource.pwa, 'libs/localforage.js')}',
+    '{!URLFOR($Resource.pwa, 'libs/vue.js')}',
+    '{!URLFOR($Resource.pwa, 'libs/vue-router.js')}',
+    '{!URLFOR($Resource.pwa, 'data.js')}',
+    '{!URLFOR($Resource.pwa, 'components.js')}',
+    '{!URLFOR($Resource.pwa, 'router.js')}',
+    '{!URLFOR($Resource.pwa, 'app.js')}',
+    '{!URLFOR($Resource.pwa, '/icons/icon-512.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-57x57.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-60x60.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-72x72.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-76x76.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-114x114.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-120x120.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-144x144.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-152x152.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/apple-icon-180x180.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/android-icon-192x192.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/favicon-32x32.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/favicon-96x96.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/favicon-16x16.png')}',
+    '{!URLFOR($Resource.pwa, '/icons/ms-icon-144x144.png')}'
+    ];
+
+
+    {!body}
+
+
+</apex:page>
